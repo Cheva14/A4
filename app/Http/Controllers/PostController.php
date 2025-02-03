@@ -38,9 +38,7 @@ class PostController extends Controller
         $validated = $request->validate([
             'message' => 'required|string|max:255',
         ]);
-
         $request->user()->posts()->create($validated);
-
         return redirect(route('posts.index'));
     }
 
@@ -66,21 +64,20 @@ class PostController extends Controller
     public function update(Request $request, Post $post): RedirectResponse
     {
         Gate::authorize('update', $post);
-
         $validated = $request->validate([
             'message' => 'required|string|max:255',
         ]);
-
         $post->update($validated);
-
         return redirect(route('posts.index'));
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Post $post)
+    public function destroy(Post $post): RedirectResponse
     {
-        //
+        Gate::authorize('delete', $post);
+        $post->delete();
+        return redirect(route('posts.index'));
     }
 }
