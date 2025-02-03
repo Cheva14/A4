@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
+use App\Models\Post;
 
 class PostController extends Controller
 {
@@ -15,7 +15,10 @@ class PostController extends Controller
      */
     public function index(): Response
     {
-        return Inertia::render('Posts/Index', []);
+        return Inertia::render('Posts/Index', [
+            'posts' => Post::with('user:id,name')->latest()->get(),
+
+        ]);
     }
 
     /**
