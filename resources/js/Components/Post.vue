@@ -1,4 +1,9 @@
 <script setup>
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+ 
+dayjs.extend(relativeTime);
+
 defineProps(['post']);
 </script>
  
@@ -11,7 +16,7 @@ defineProps(['post']);
             <div class="flex justify-between items-center">
                 <div>
                     <span class="text-gray-800">{{ post.user.name }}</span>
-                    <small class="ml-2 text-sm text-gray-600">{{ new Date(post.created_at).toLocaleString() }}</small>
+                    <small class="ml-2 text-sm text-gray-600">{{ dayjs(post.created_at).fromNow() }}</small>
                 </div>
             </div>
             <p class="mt-4 text-lg text-gray-900">{{ post.message }}</p>
