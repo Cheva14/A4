@@ -23,7 +23,7 @@ const props = defineProps({
         <div class="py-12">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div
-                    class="overflow-hidden bg-white shadow-sm sm:rounded-lg"
+                    class="overflow-hidden bg-white shadow-sm sm:rounded-lg text-left"
                 >
                     <div class="p-6 text-gray-900">
                         Welcome Back {{ $page.props.auth.user.name }}!!
@@ -33,7 +33,7 @@ const props = defineProps({
         </div>
         <div class="py-12">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
+                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg text-left">
                     <div class="p-6 text-gray-900">
                         <h3 class="text-lg font-semibold leading-tight text-gray-800">News</h3>
                         <p>Latest news will be displayed here.</p>
@@ -44,7 +44,7 @@ const props = defineProps({
 
         <div class="py-12">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
+                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg text-left">
                     <div class="p-6 text-gray-900">
                         <h3 class="text-lg font-semibold leading-tight text-gray-800">New Posts</h3>
                         <p>Latest posts will be displayed here.</p>
@@ -55,7 +55,7 @@ const props = defineProps({
 
         <div class="py-12">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
+                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg text-left">
                     <div class="p-6 text-gray-900">
                         <h3 class="text-lg font-semibold leading-tight text-gray-800">New Blogs</h3>
                         <p>Latest blogs will be displayed here.</p>
