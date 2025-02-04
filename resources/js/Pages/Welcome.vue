@@ -89,7 +89,7 @@ function handleImageError() {
                 <footer
                     class="py-16 text-center text-sm text-black dark:text-white/70"
                 >
-                    By Sebastian Torrejon Alonzo | v3.2.1
+                    By Sebastian Torrejon Alonzo | v2.1.1
                 </footer>
             </div>
         </div>
